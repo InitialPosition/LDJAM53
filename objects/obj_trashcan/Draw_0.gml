@@ -1,0 +1,1 @@
+scr_trash_draw();
