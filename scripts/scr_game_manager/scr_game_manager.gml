@@ -145,6 +145,7 @@ function scr_game_manager_spawn_new_server() {
 		while !place_empty(x, y, obj_mail_server) && _attempt_counter < 32 {
 			x = irandom_range(64, room_width - sprite_width - 64);
 			y = irandom_range(64, room_height - sprite_height - 96);
+			_attempt_counter++;
 		}
 		
 		// if placing failed, try again, allowing inoptimal space
@@ -154,6 +155,7 @@ function scr_game_manager_spawn_new_server() {
 			while !place_empty(x, y, obj_mail_server) && _attempt_counter < 32 {
 				x = irandom_range(0, room_width - sprite_width);
 				y = irandom_range(64, room_height - sprite_height - 32);
+				_attempt_counter++;
 			}
 		}
 		
